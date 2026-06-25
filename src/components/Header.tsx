@@ -6,6 +6,7 @@ import { hero } from "@/lib/site";
 import WhatsAppButton from "./WhatsAppButton";
 
 const navLinks = [
+  { href: "#finishes", label: "Finishes" },
   { href: "#craftsmanship", label: "Craftsmanship" },
   { href: "#customise", label: "Customise" },
   { href: "#process", label: "How It Works" },

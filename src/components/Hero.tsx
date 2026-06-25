@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/slide1.jpg"
+          src="/hero-bg.png"
           alt="Bespoke MATNESS leather car mat fitted in a luxury vehicle"
           fill
           priority

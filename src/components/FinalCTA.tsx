@@ -8,7 +8,7 @@ export default function FinalCTA() {
     <section id="quote" className="relative isolate overflow-hidden py-24 sm:py-32">
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/slide2.jpg"
+          src="/bordeaux-red-2.jpg"
           alt=""
           fill
           sizes="100vw"

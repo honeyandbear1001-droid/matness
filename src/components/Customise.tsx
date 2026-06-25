@@ -15,8 +15,8 @@ export default function Customise() {
         <Reveal>
           <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-md border border-border shadow-gold">
             <Image
-              src="/intro.jpg"
-              alt="Custom MATNESS leather mat with contrast stitching"
+              src="/canyon-tan-2.jpg"
+              alt="Custom MATNESS leather mats with quilted stitching and embroidered emblem"
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover"

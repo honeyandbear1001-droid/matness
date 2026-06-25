@@ -1,53 +1,68 @@
 import Image from "next/image";
-import { editions } from "@/lib/site";
+import { showcaseStyles } from "@/lib/site";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
+import WhatsAppButton from "./WhatsAppButton";
 
 export default function Showcase() {
   return (
-    <section className="container-px py-20 sm:py-28">
+    <section id="finishes" className="container-px py-20 sm:py-28">
       <SectionHeading
-        eyebrow="Leather Editions"
+        eyebrow="The Colour Range"
         title={<>Choose Your <span className="text-gold">Finish</span></>}
-        sub="Two signature leathers, each tanned and finished to last the life of your car."
+        sub="Seven signature leathers, each laser-cut to your exact cabin and hand-stitched to order. Don't see your shade? We tailor any colour, stitching and pattern to spec."
       />
 
-      <div className="mt-14 grid gap-6 lg:grid-cols-5">
-        {/* Feature image */}
-        <Reveal className="lg:col-span-3">
-          <div className="relative h-72 overflow-hidden rounded-md border border-border sm:h-96 lg:h-full">
-            <Image
-              src="/slide2.jpg"
-              alt="MATNESS premium leather car mat detail"
-              fill
-              sizes="(min-width: 1024px) 60vw, 100vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 p-7">
-              <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-                Hand-stitched
-              </p>
-              <p className="mt-1 max-w-sm text-lg font-medium">
-                Precision tailoring, edge to edge — finished by hand, never mass-produced.
-              </p>
-            </div>
+      <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+        {showcaseStyles.map((style, i) => (
+          <Reveal key={style.name} delay={i * 70}>
+            <figure className="group relative h-full overflow-hidden rounded-md border border-border">
+              <div className="relative aspect-[5/4] overflow-hidden">
+                <Image
+                  src={style.image}
+                  alt={`MATNESS ${style.name} leather car mat fitted in a vehicle`}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+              </div>
+              <figcaption className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                <div className="flex items-center gap-2">
+                  <span
+                    className="h-3 w-3 shrink-0 rounded-full ring-1 ring-white/30"
+                    style={{ backgroundColor: style.hex }}
+                    aria-hidden="true"
+                  />
+                  <p className="text-xs font-medium uppercase tracking-widest text-primary">
+                    {style.tone}
+                  </p>
+                </div>
+                <h3 className="mt-1 text-lg font-semibold sm:text-xl">{style.name}</h3>
+                <p className="mt-1 hidden text-sm leading-snug text-muted-foreground sm:block">
+                  {style.desc}
+                </p>
+              </figcaption>
+            </figure>
+          </Reveal>
+        ))}
+
+        {/* 8th tile — fills the 4×2 grid and turns the gallery into a CTA */}
+        <Reveal delay={showcaseStyles.length * 70}>
+          <div className="flex h-full min-h-[200px] flex-col items-center justify-center rounded-md border border-primary/40 bg-gradient-radial-gold p-6 text-center">
+            <p className="text-base font-semibold sm:text-lg">Don&apos;t see your shade?</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Colour, stitching &amp; pattern — tailored to your exact spec.
+            </p>
+            <WhatsAppButton
+              location="showcase"
+              message="Hi MATNESS! I'd like a custom colour/finish for my mats. My vehicle is: "
+              className="mt-5 !px-5 !py-3 !text-sm"
+            >
+              Ask About Custom
+            </WhatsAppButton>
           </div>
         </Reveal>
-
-        {/* Edition cards */}
-        <div className="flex flex-col gap-6 lg:col-span-2">
-          {editions.map((edition, i) => (
-            <Reveal key={edition.name} delay={i * 120} className="flex-1">
-              <div className="card-surface flex h-full flex-col justify-center p-7">
-                <h3 className="text-2xl font-semibold">{edition.name}</h3>
-                <p className="mt-3 leading-relaxed text-muted-foreground">
-                  {edition.desc}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   );

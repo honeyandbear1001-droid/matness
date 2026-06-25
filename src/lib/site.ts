@@ -87,15 +87,59 @@ export const layers = [
   },
 ] as const;
 
-/* --- Leather editions ---------------------------------------------------- */
-export const editions = [
+/* --- Leather colour range (real MATNESS showcase styles) -----------------
+ *  Images and colour data sourced from matness.co's own product library so
+ *  the gallery shows exactly what the client offers.
+ * ------------------------------------------------------------------------- */
+export const showcaseStyles = [
   {
-    name: "Premium Luxe Leather",
-    desc: "Our signature full-grain finish — rich, resilient and timeless.",
+    name: "Classic Black",
+    tone: "Timeless Black",
+    hex: "#2b2b2b",
+    desc: "Deep, understated black that disappears into any cabin — the quiet upgrade.",
+    image: "/classic-black-1.jpg",
   },
   {
-    name: "Nappa Leather Edition",
-    desc: "Ultra-soft, supple Nappa for the most discerning interiors.",
+    name: "Bordeaux Red",
+    tone: "Dark Bordeaux",
+    hex: "#5c0700",
+    desc: "A deep, wine-dark red with a genuine sense of occasion.",
+    image: "/bordeaux-red-1.jpg",
+  },
+  {
+    name: "Magma Red",
+    tone: "Burgundy Wine",
+    hex: "#561029",
+    desc: "Deep, luxurious burgundy with subtle purple undertones.",
+    image: "/magma-red-1.jpg",
+  },
+  {
+    name: "Ruby Red",
+    tone: "Signature Red",
+    hex: "#dc2626",
+    desc: "Bold, confident red for an interior that loves to be noticed.",
+    image: "/ruby-red-1.jpg",
+  },
+  {
+    name: "Mocca Brown",
+    tone: "Rich Espresso",
+    hex: "#583400",
+    desc: "Warm, sophisticated brown with rich amber undertones.",
+    image: "/mocca-brown-1.jpg",
+  },
+  {
+    name: "Canyon Tan",
+    tone: "Sunset Gold",
+    hex: "#a96800",
+    desc: "Vibrant warm gold with copper undertones.",
+    image: "/canyon-tan-1.jpg",
+  },
+  {
+    name: "Silk Beige",
+    tone: "Warm Beige",
+    hex: "#d4a574",
+    desc: "Soft, warm beige for the lightest luxury interiors.",
+    image: "/silk-beige-1.jpg",
   },
 ] as const;
 
