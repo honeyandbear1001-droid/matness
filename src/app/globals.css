@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+ *  MATNESS design tokens — warm near-black + gold, matching the brand.
+ * ========================================================================== */
+@layer base {
+  :root {
+    --background: 30 10% 6%;
+    --foreground: 40 30% 96%;
+
+    --card: 30 12% 9%;
+    --card-foreground: 40 30% 96%;
+
+    --primary: 41 65% 55%;
+    --primary-foreground: 30 15% 8%;
+    --primary-glow: 45 90% 70%;
+
+    --secondary: 30 8% 14%;
+    --secondary-foreground: 40 30% 96%;
+
+    --muted: 30 8% 14%;
+    --muted-foreground: 40 10% 65%;
+
+    --accent: 41 65% 55%;
+    --accent-foreground: 30 15% 8%;
+
+    --border: 30 10% 18%;
+    --input: 30 10% 18%;
+    --ring: 41 65% 55%;
+
+    --radius: 0.25rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: radial-gradient(
+        circle at 50% -10%,
+        hsl(41 65% 55% / 0.1),
+        transparent 55%
+      ),
+      radial-gradient(circle at 100% 100%, hsl(41 65% 55% / 0.05), transparent 45%);
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .text-gold {
+    @apply bg-gradient-gold bg-clip-text text-transparent;
+  }
+
+  .gold-rule {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--primary) / 0.6),
+      transparent
+    );
+  }
+
+  /* Primary CTA — the money button */
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-gradient-gold
+      px-7 py-4 text-base font-semibold text-primary-foreground shadow-gold
+      transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_24px_70px_-18px_hsl(41_65%_55%_/_0.6)]
+      focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+      focus-visible:outline-primary;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-primary/40
+      bg-transparent px-7 py-4 text-base font-semibold text-foreground transition-all
+      duration-300 hover:border-primary hover:bg-primary/10;
+  }
+
+  .card-surface {
+    @apply rounded-md border border-border bg-gradient-card;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.25em] text-primary;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
