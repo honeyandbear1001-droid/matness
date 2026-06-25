@@ -1,43 +1,49 @@
-import Image from "next/image";
 import { hero, trustPoints } from "@/lib/site";
 import WhatsAppButton from "./WhatsAppButton";
 
 export default function Hero() {
   return (
     <section id="top" className="relative isolate overflow-hidden">
-      {/* Background image */}
+      {/* Background video — clean cinematic loop; poster paints instantly for LCP */}
       <div className="absolute inset-0 -z-10">
-        <Image
-          src="/hero-bg.png"
-          alt="Bespoke MATNESS leather car mat fitted in a luxury vehicle"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
+        <video
+          className="h-full w-full object-cover object-center"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/hero-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/hero-loop.mp4" type="video/mp4" />
+        </video>
+        {/* Cinematic grading: darken bottom for copy, vignette the edges */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/75 via-background/55 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/45 to-transparent" />
+        <div className="absolute inset-0 [box-shadow:inset_0_0_220px_60px_hsl(28_18%_3%_/_0.9)]" />
       </div>
 
-      <div className="container-px flex min-h-[100svh] flex-col justify-center pb-16 pt-28 sm:pt-32">
-        <div className="max-w-2xl">
+      <div className="container-px relative flex min-h-[100svh] flex-col justify-center pb-24 pt-32 sm:pt-36">
+        <div className="max-w-3xl">
           <p className="eyebrow animate-fade-in">{hero.eyebrow}</p>
 
-          <h1 className="mt-5 text-balance text-4xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl">
-            Floor Mats Worthy of the{" "}
+          <h1 className="mt-6 text-balance text-[2.7rem] font-bold leading-[1.02] tracking-tightest sm:text-6xl lg:text-[5.25rem]">
+            Floor Mats Worthy
+            <br className="hidden sm:block" /> of the{" "}
             <span className="text-gold">Car You Drive</span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
+          <p className="mt-6 max-w-xl font-serif text-lg italic leading-snug text-foreground/70 sm:text-xl">
+            {hero.promise}
+          </p>
+
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             {hero.sub}
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <WhatsAppButton
-              location="hero"
-              message={hero.quoteMessage}
-              className="animate-pulse-glow"
-            >
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <WhatsAppButton location="hero" message={hero.quoteMessage}>
               {hero.primaryCta}
             </WhatsAppButton>
             <a href="#craftsmanship" className="btn-outline">
@@ -46,7 +52,7 @@ export default function Hero() {
           </div>
 
           {/* Trust micro-row */}
-          <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
+          <ul className="mt-12 flex flex-wrap gap-x-7 gap-y-2.5">
             {trustPoints.slice(0, 3).map((point) => (
               <li
                 key={point}
@@ -72,7 +78,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll hint */}
-      <div className="pointer-events-none absolute bottom-6 left-1/2 hidden -translate-x-1/2 animate-fade-in sm:block">
+      <div className="pointer-events-none absolute bottom-7 left-1/2 hidden -translate-x-1/2 animate-fade-in sm:block">
         <div className="flex h-10 w-6 items-start justify-center rounded-full border border-primary/40 p-1.5">
           <span className="h-2 w-1 animate-bounce rounded-full bg-primary" />
         </div>

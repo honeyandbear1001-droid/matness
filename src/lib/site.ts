@@ -45,10 +45,13 @@ export const site = {
 
 /* --- Hero ---------------------------------------------------------------- */
 export const hero = {
-  eyebrow: "Premium · Custom-Fit · Hand-Stitched",
+  eyebrow: "Bespoke · Laser-Measured · Hand-Stitched",
   headline: "Floor Mats Worthy of the Car You Drive",
-  sub: "Bespoke dual-layer leather mats — laser-measured to your exact vehicle and hand-stitched to order. Built for protection. Designed for comfort.",
-  primaryCta: "Get My Quote on WhatsApp",
+  // One-line dream outcome — what they actually get.
+  promise:
+    "The first thing you see when the door opens. The last detail your car was missing.",
+  sub: "Bespoke dual-layer leather mats — laser-measured to your exact make, model and year, then hand-stitched to order. The fit is flawless. The feel is first-class.",
+  primaryCta: "Get My Free Quote on WhatsApp",
   secondaryCta: "See the Craftsmanship",
   quoteMessage:
     "Hi MATNESS! I'd like a quote for custom leather mats. My vehicle is: ",
@@ -62,6 +65,44 @@ export const trustPoints = [
   "Hand-stitched, made to order",
   "Ships across Malaysia & Singapore",
 ] as const;
+
+/* --- Hard proof stats (all verifiable / truthful) ------------------------ */
+export const proofStats = [
+  { value: "30+", label: "Luxury marques fitted" },
+  { value: "5-Layer", label: "Bespoke construction" },
+  { value: "5–7 Days", label: "Hand-made to order" },
+  { value: "2×", label: "Independent certifications" },
+] as const;
+
+/* --- Problem → Agitation (Sabri Suby PAS) -------------------------------
+ *  The hidden cost of what most drivers settle for. All claims are generic,
+ *  observable truths about cheap/universal mats — nothing fabricated.
+ * ------------------------------------------------------------------------- */
+export const problem = {
+  eyebrow: "The Uncomfortable Truth",
+  title: "You spent a fortune on the car. Then dressed the floor like an afterthought.",
+  sub: "Universal mats are the single fastest way to cheapen a beautiful interior — and most owners never notice until a passenger does.",
+  pains: [
+    {
+      title: "They slide toward the pedals",
+      desc: "Generic mats bunch and creep while you drive — an annoyance at best, a hazard at worst.",
+    },
+    {
+      title: "The gaps trap grit & water",
+      desc: "One-size-fits-most leaves your carpet exposed exactly where mud, salt and spills do the most damage.",
+    },
+    {
+      title: "They look — and smell — aftermarket",
+      desc: "Thin rubber and chemical odour announce themselves the second the door opens. Your guests notice.",
+    },
+    {
+      title: "They quietly age the car",
+      desc: "Worn, mismatched mats drag down resale value and the whole feel of a cabin you paid premium money for.",
+    },
+  ],
+  closer:
+    "The floor is the one surface in your car you touch every single drive. It deserves better than a compromise.",
+} as const;
 
 /* --- The 5-layer construction (core product story) ----------------------- */
 export const layers = [
@@ -151,23 +192,23 @@ export const customisation = [
   { label: "Embroidery & logos", detail: "Add your initials or vehicle marque." },
 ] as const;
 
-/* --- Why MATNESS (value props for ad traffic) ---------------------------- */
+/* --- The MATNESS Difference (unique mechanism — the "turn" after PAS) ----- */
 export const valueProps = [
   {
     title: "Laser-Measured Perfect Fit",
-    desc: "Every set is cut to your exact make, model and year — edge-to-edge coverage with no gaps, no trimming, no compromise.",
+    desc: "Every set is cut to your exact make, model and year — edge-to-edge coverage with no gaps, no trimming, no compromise. This is the mechanism universal mats can't copy.",
   },
   {
     title: "An Interior Upgrade, Not Just a Mat",
-    desc: "MATNESS isn't a floor mat — it's an interior upgrade system designed to redefine the luxury driving experience.",
+    desc: "Five engineered layers — leather, memory foam, secure fastening, structural base and an anti-slip bottom — turn a floor mat into a genuine interior upgrade system.",
   },
   {
     title: "Verified Craftsmanship",
-    desc: "ISO 9001:2015 and OEKO-TEX® certified materials and processes. Verified excellence — not promises.",
+    desc: "ISO 9001:2015 quality management and OEKO-TEX® certified leather. Independently verified excellence — not marketing promises.",
   },
   {
-    title: "Made to Order in 5–7 Days",
-    desc: "Hand-stitched to order and delivered across Malaysia & Singapore, typically within 5–7 working days.",
+    title: "Hand-Made to Order in 5–7 Days",
+    desc: "Hand-stitched to your spec and delivered across Malaysia & Singapore, typically within 5–7 working days. Then fitted in minutes, no tools.",
   },
 ] as const;
 
@@ -194,6 +235,99 @@ export const processSteps = [
     desc: "Mats arrive ready to drop in. Installation takes minutes, no tools required.",
   },
 ] as const;
+
+/* --- The Offer / value stack (everything included in a bespoke set) ------
+ *  Real deliverables only — no invented dollar figures. Framed so the quote
+ *  reads as a complete transformation rather than "a pair of mats".
+ * ------------------------------------------------------------------------- */
+export const offer = {
+  eyebrow: "What's Included",
+  title: "Every MATNESS commission is a complete interior transformation",
+  sub: "Not a product off a shelf — a bespoke set built around your car and only your car. Here's everything that comes standard with every quote.",
+  includes: [
+    {
+      item: "Laser-measured bespoke fit",
+      desc: "Cut to your exact make, model and year for true edge-to-edge coverage.",
+    },
+    {
+      item: "Full-grain leather, your colour",
+      desc: "Seven signature leathers — or any shade, matched to your cabin.",
+    },
+    {
+      item: "Five-layer engineered build",
+      desc: "Leather, memory foam, secure fastening, structural base and anti-slip bottom.",
+    },
+    {
+      item: "Custom stitching & pattern",
+      desc: "Contrast or tonal thread; quilted, diamond, hex and more — your choice.",
+    },
+    {
+      item: "Optional embroidery & logo",
+      desc: "Your initials or vehicle marque, hand-finished into the set.",
+    },
+    {
+      item: "Anti-slip safety system",
+      desc: "Hook-and-loop plus silicone base keeps everything locked away from the pedals.",
+    },
+    {
+      item: "Delivered & drop-in fitted",
+      desc: "Arrives ready to install in minutes — no tools, no trimming, no fuss.",
+    },
+    {
+      item: "Certified, defect-backed quality",
+      desc: "ISO 9001:2015 & OEKO-TEX® materials, covered by our craftsmanship guarantee.",
+    },
+  ],
+  cta: "Get My Personalised Quote",
+  // Tasteful, truthful scarcity for a hand-made-to-order atelier.
+  // TODO(client): confirm this reflects real capacity before running ads.
+  scarcity:
+    "Because every set is hand-made to order, we take on a limited number of new commissions each week to protect our finish and lead times.",
+} as const;
+
+/* --- Risk reversal / guarantee (built from the real warranty terms) ------ */
+export const guarantee = {
+  eyebrow: "Order With Zero Risk",
+  title: "The Perfect-Fit Promise",
+  body: "We laser-measure to your exact vehicle, so your set is guaranteed to fit. Every commission is covered against manufacturing defects, and if anything about the fitment isn't right, tell us within 48 hours of delivery and we'll make it right — remake or repair. Because each set is custom-made to your spec, that's how we stand behind the craft.",
+  points: [
+    "Guaranteed precise fit — laser-measured to your make, model & year",
+    "Covered against manufacturing defects",
+    "48-hour fitment check — not right, we make it right",
+  ],
+} as const;
+
+/* --- Social proof — testimonials -----------------------------------------
+ *  ⚠️ PLACEHOLDER CONTENT ⚠️
+ *  These are illustrative examples written to demonstrate the layout. They
+ *  are NOT real customer reviews. Replace every entry with genuine, verifiable
+ *  testimonials (ideally with permission + real names) BEFORE going live or
+ *  running ads — publishing fabricated reviews is misleading and, in many
+ *  markets, unlawful. Same applies to `testimonialRating` below.
+ * ------------------------------------------------------------------------- */
+export const testimonials = [
+  {
+    quote:
+      "The fit is unreal — edge to edge, like the car came with them. First thing every passenger comments on now.",
+    attribution: "Bentley Continental GT · Kuala Lumpur",
+  },
+  {
+    quote:
+      "I've bought 'custom' mats before that were anything but. These actually are. The leather and stitching feel factory-fitted.",
+    attribution: "Porsche Cayenne · Singapore",
+  },
+  {
+    quote:
+      "Quoted on WhatsApp in minutes, delivered in under a week, dropped straight in. Effortless from start to finish.",
+    attribution: "Range Rover Sport · Johor Bahru",
+  },
+] as const;
+
+/** ⚠️ PLACEHOLDER rating — replace with a real, verifiable figure or remove. */
+export const testimonialRating = {
+  stars: 5,
+  label: "Loved by drivers across Malaysia & Singapore",
+} as const;
 
 /* --- Certifications ------------------------------------------------------ */
 export const certifications = [
@@ -297,9 +431,11 @@ export const brandStory = {
 
 /* --- Final CTA ----------------------------------------------------------- */
 export const finalCta = {
-  headline: "Your Car Deserves a Perfect Fit",
-  sub: "Send us your vehicle details on WhatsApp and get a personalised quote — most replies within minutes during business hours.",
-  cta: "Message Us on WhatsApp",
+  eyebrow: "Your Car Is Waiting",
+  headline: "Give the Floor the Same Standard as the Drive",
+  sub: "Send your vehicle details on WhatsApp for a free, no-obligation quote — most replies within minutes during business hours. No deposit to get a price.",
+  cta: "Get My Free Quote on WhatsApp",
+  reassurance: "Free quote · Guaranteed fit · Hand-made in 5–7 days",
   message:
     "Hi MATNESS! I'm interested in custom leather car mats. Can you send me a quote? My vehicle is: ",
 } as const;

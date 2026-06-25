@@ -12,13 +12,21 @@ export default function SectionHeading({
   center?: boolean;
 }) {
   return (
-    <Reveal className={`max-w-2xl ${center ? "mx-auto text-center" : ""}`}>
-      {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-      <h2 className="mt-3 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+    <Reveal className={`max-w-3xl ${center ? "mx-auto text-center" : ""}`}>
+      {eyebrow && (
+        <p className={`eyebrow ${center ? "justify-center" : ""}`}>{eyebrow}</p>
+      )}
+      <h2 className="mt-5 text-balance text-[2rem] font-bold leading-[1.08] sm:text-4xl lg:text-[3rem]">
         {title}
       </h2>
       {sub && (
-        <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{sub}</p>
+        <p
+          className={`mt-5 text-lg leading-relaxed text-muted-foreground ${
+            center ? "mx-auto max-w-2xl" : "max-w-xl"
+          }`}
+        >
+          {sub}
+        </p>
       )}
     </Reveal>
   );

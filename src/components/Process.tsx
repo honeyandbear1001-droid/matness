@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 export default function Process() {
   return (
-    <section id="process" className="container-px py-20 sm:py-28">
+    <section id="process" className="container-px section-y">
       <SectionHeading
         eyebrow="How It Works"
         title={<>From Inquiry to <span className="text-gold">Installed</span></>}

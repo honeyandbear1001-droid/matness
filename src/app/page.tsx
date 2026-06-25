@@ -1,11 +1,15 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import ProblemAgitation from "@/components/ProblemAgitation";
 import ValueProps from "@/components/ValueProps";
 import Craftsmanship from "@/components/Craftsmanship";
 import Showcase from "@/components/Showcase";
 import Customise from "@/components/Customise";
+import Testimonials from "@/components/Testimonials";
 import Process from "@/components/Process";
+import Offer from "@/components/Offer";
+import Guarantee from "@/components/Guarantee";
 import Certifications from "@/components/Certifications";
 import Brands from "@/components/Brands";
 import FAQ from "@/components/FAQ";
@@ -45,11 +49,15 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
+        <ProblemAgitation />
         <ValueProps />
         <Craftsmanship />
         <Showcase />
         <Customise />
+        <Testimonials />
         <Process />
+        <Offer />
+        <Guarantee />
         <Certifications />
         <Brands />
         <FAQ />

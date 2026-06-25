@@ -8,12 +8,12 @@ export default function Customise() {
   return (
     <section
       id="customise"
-      className="relative border-y border-border bg-card/30 py-20 sm:py-28"
+      className="relative border-y border-white/[0.06] bg-card/30 section-y"
     >
       <div className="container-px grid items-center gap-12 lg:grid-cols-2">
         {/* Portrait image */}
         <Reveal>
-          <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-md border border-border shadow-gold">
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-2xl border border-white/[0.06] shadow-luxe">
             <Image
               src="/canyon-tan-2.jpg"
               alt="Custom MATNESS leather mats with quilted stitching and embroidered emblem"
@@ -36,7 +36,7 @@ export default function Customise() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {customisation.map((item, i) => (
               <Reveal key={item.label} delay={i * 80}>
-                <div className="rounded-md border border-border bg-background/40 p-5">
+                <div className="rounded-xl border border-white/[0.06] bg-background/40 p-5">
                   <h3 className="font-semibold text-primary">{item.label}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{item.detail}</p>
                 </div>

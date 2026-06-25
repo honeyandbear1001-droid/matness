@@ -7,7 +7,7 @@ export default function Craftsmanship() {
   return (
     <section
       id="craftsmanship"
-      className="relative border-y border-border bg-card/30 py-20 sm:py-28"
+      className="relative border-y border-white/[0.06] bg-card/30 section-y"
     >
       <div className="container-px">
         <SectionHeading
@@ -19,7 +19,7 @@ export default function Craftsmanship() {
         <div className="mt-14 grid items-center gap-12 lg:grid-cols-2">
           {/* Cross-section image */}
           <Reveal className="order-2 lg:order-1">
-            <div className="relative overflow-hidden rounded-md border border-border shadow-gold">
+            <div className="relative overflow-hidden rounded-2xl border border-white/[0.06] shadow-luxe">
               <Image
                 src="/layer.jpg"
                 alt="Cross-section of a MATNESS mat showing its five layers"
@@ -36,7 +36,7 @@ export default function Craftsmanship() {
           <div className="order-1 space-y-3 lg:order-2">
             {layers.map((layer, i) => (
               <Reveal key={layer.name} delay={i * 80}>
-                <div className="group flex gap-4 rounded-md border border-transparent p-4 transition-colors hover:border-border hover:bg-card/60">
+                <div className="group flex gap-4 rounded-xl border border-transparent p-4 transition-colors hover:border-white/10 hover:bg-card/60">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/40 text-sm font-bold text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                     {i + 1}
                   </div>

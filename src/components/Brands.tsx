@@ -6,7 +6,7 @@ export default function Brands() {
   const row = [...brands, ...brands];
 
   return (
-    <section className="border-y border-border bg-card/30 py-20 sm:py-28">
+    <section className="border-y border-white/[0.06] bg-card/30 section-y">
       <div className="container-px">
         <SectionHeading
           eyebrow="Fits 30+ Marques"
@@ -24,7 +24,7 @@ export default function Brands() {
           {row.map((brand, i) => (
             <span
               key={`${brand}-${i}`}
-              className="whitespace-nowrap rounded-full border border-border bg-background/50 px-5 py-2.5 text-sm font-medium text-muted-foreground"
+              className="whitespace-nowrap rounded-full border border-white/[0.06] bg-background/50 px-5 py-2.5 text-sm font-medium text-muted-foreground"
             >
               {brand}
             </span>

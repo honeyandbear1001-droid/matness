@@ -6,7 +6,7 @@ import WhatsAppButton from "./WhatsAppButton";
 
 export default function Showcase() {
   return (
-    <section id="finishes" className="container-px py-20 sm:py-28">
+    <section id="finishes" className="container-px section-y">
       <SectionHeading
         eyebrow="The Colour Range"
         title={<>Choose Your <span className="text-gold">Finish</span></>}
@@ -16,7 +16,7 @@ export default function Showcase() {
       <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
         {showcaseStyles.map((style, i) => (
           <Reveal key={style.name} delay={i * 70}>
-            <figure className="group relative h-full overflow-hidden rounded-md border border-border">
+            <figure className="group relative h-full overflow-hidden rounded-2xl border border-white/[0.06]">
               <div className="relative aspect-[5/4] overflow-hidden">
                 <Image
                   src={style.image}
@@ -49,7 +49,7 @@ export default function Showcase() {
 
         {/* 8th tile — fills the 4×2 grid and turns the gallery into a CTA */}
         <Reveal delay={showcaseStyles.length * 70}>
-          <div className="flex h-full min-h-[200px] flex-col items-center justify-center rounded-md border border-primary/40 bg-gradient-radial-gold p-6 text-center">
+          <div className="flex h-full min-h-[200px] flex-col items-center justify-center rounded-2xl border border-primary/40 bg-gradient-radial-gold p-6 text-center">
             <p className="text-base font-semibold sm:text-lg">Don&apos;t see your shade?</p>
             <p className="mt-2 text-sm text-muted-foreground">
               Colour, stitching &amp; pattern — tailored to your exact spec.

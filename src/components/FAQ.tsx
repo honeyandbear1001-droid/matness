@@ -5,7 +5,7 @@ import WhatsAppButton from "./WhatsAppButton";
 
 export default function FAQ() {
   return (
-    <section id="faq" className="container-px py-20 sm:py-28">
+    <section id="faq" className="container-px section-y">
       <SectionHeading
         eyebrow="Questions, Answered"
         title={<>Everything You <span className="text-gold">Need to Know</span></>}

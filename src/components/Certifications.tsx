@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function Certifications() {
   return (
-    <section className="container-px py-20 sm:py-28">
+    <section className="container-px section-y">
       <SectionHeading
         eyebrow="Verified Excellence — Not Promises"
         title={<>Certified to a <span className="text-gold">Higher Standard</span></>}
@@ -16,7 +16,7 @@ export default function Certifications() {
         {certifications.map((cert, i) => (
           <Reveal key={cert.name} delay={i * 120}>
             <div className="card-surface flex h-full items-center gap-5 p-6">
-              <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-md bg-background/60 p-2">
+              <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-background/60 p-2">
                 <Image
                   src={cert.image}
                   alt={`${cert.name} certification`}
