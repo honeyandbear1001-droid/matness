@@ -359,7 +359,7 @@ export const brands = [
   "Audi",
   "Lexus",
   "Tesla",
-  "Range Rover",
+  "Koenigsegg",
   "Land Rover",
   "Jaguar",
   "Volvo",

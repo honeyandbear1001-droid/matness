@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import Script from "next/script";
 import { site } from "@/lib/site";
 import { GA4_ID, GOOGLE_ADS_ID } from "@/lib/analytics";
@@ -11,10 +11,13 @@ const inter = Inter({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+// Fraunces — a refined modern serif. Default WONK/SOFT axes are 0, so it reads
+// elegant rather than theatrical (the heavy high-contrast Playfair felt "whacky").
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-fraunces",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -63,7 +66,7 @@ export default function RootLayout({
   const gtagId = GOOGLE_ADS_ID || GA4_ID;
 
   return (
-    <html lang="en" className={`dark ${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`dark ${inter.variable} ${fraunces.variable}`}>
       <body>
         {children}
 

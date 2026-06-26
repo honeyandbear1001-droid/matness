@@ -82,6 +82,7 @@
     @apply font-serif;
     letter-spacing: -0.018em;
     text-wrap: balance;
+    font-optical-sizing: auto;
   }
 
   ::selection {

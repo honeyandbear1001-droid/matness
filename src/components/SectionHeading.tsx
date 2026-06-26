@@ -16,7 +16,7 @@ export default function SectionHeading({
       {eyebrow && (
         <p className={`eyebrow ${center ? "justify-center" : ""}`}>{eyebrow}</p>
       )}
-      <h2 className="mt-5 text-balance text-[2rem] font-bold leading-[1.08] sm:text-4xl lg:text-[3rem]">
+      <h2 className="mt-5 text-balance text-[2rem] font-semibold leading-[1.08] sm:text-4xl lg:text-[3rem]">
         {title}
       </h2>
       {sub && (
