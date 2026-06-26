@@ -29,14 +29,14 @@ function MarqueeRow({
       {row.map((brand, i) => (
         <span
           key={`${brand}-${i}`}
-          className="mx-6 flex shrink-0 items-center sm:mx-9"
+          className="mx-2.5 flex h-16 w-36 shrink-0 items-center justify-center rounded-xl bg-[#faf8f3] px-5 shadow-[0_10px_30px_-14px_rgba(0,0,0,0.7)] ring-1 ring-black/5 transition duration-500 hover:-translate-y-0.5 hover:bg-white sm:mx-3.5 sm:h-[4.75rem] sm:w-44"
         >
           <img
             src={logoSrc(brand)}
             alt={`${brand} logo`}
             loading="lazy"
             decoding="async"
-            className="h-7 w-auto opacity-50 [filter:brightness(0)_invert(1)] transition duration-500 hover:opacity-100 hover:[filter:none] sm:h-9"
+            className="max-h-9 w-auto max-w-full object-contain opacity-90 transition duration-500 hover:opacity-100"
           />
         </span>
       ))}
