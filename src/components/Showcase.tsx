@@ -23,7 +23,16 @@ export default function Showcase() {
                   alt={`MATNESS ${style.name} leather car mat fitted in a vehicle`}
                   fill
                   sizes="(min-width: 1024px) 25vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Second angle from the MATNESS library — cross-fades in on hover */}
+                <Image
+                  src={style.image2}
+                  alt=""
+                  aria-hidden
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
+                  className="object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
               </div>

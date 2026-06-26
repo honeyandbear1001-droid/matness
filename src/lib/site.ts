@@ -139,6 +139,7 @@ export const showcaseStyles = [
     hex: "#2b2b2b",
     desc: "Deep, understated black that disappears into any cabin — the quiet upgrade.",
     image: "/classic-black-1.jpg",
+    image2: "/classic-black-2.jpg",
   },
   {
     name: "Bordeaux Red",
@@ -146,6 +147,7 @@ export const showcaseStyles = [
     hex: "#5c0700",
     desc: "A deep, wine-dark red with a genuine sense of occasion.",
     image: "/bordeaux-red-1.jpg",
+    image2: "/bordeaux-red-2.jpg",
   },
   {
     name: "Magma Red",
@@ -153,6 +155,7 @@ export const showcaseStyles = [
     hex: "#561029",
     desc: "Deep, luxurious burgundy with subtle purple undertones.",
     image: "/magma-red-1.jpg",
+    image2: "/magma-red-2.jpg",
   },
   {
     name: "Ruby Red",
@@ -160,6 +163,7 @@ export const showcaseStyles = [
     hex: "#dc2626",
     desc: "Bold, confident red for an interior that loves to be noticed.",
     image: "/ruby-red-1.jpg",
+    image2: "/ruby-red-2.jpg",
   },
   {
     name: "Mocca Brown",
@@ -167,6 +171,7 @@ export const showcaseStyles = [
     hex: "#583400",
     desc: "Warm, sophisticated brown with rich amber undertones.",
     image: "/mocca-brown-1.jpg",
+    image2: "/mocca-brown-2.jpg",
   },
   {
     name: "Canyon Tan",
@@ -174,6 +179,7 @@ export const showcaseStyles = [
     hex: "#a96800",
     desc: "Vibrant warm gold with copper undertones.",
     image: "/canyon-tan-1.jpg",
+    image2: "/canyon-tan-2.jpg",
   },
   {
     name: "Silk Beige",
@@ -181,6 +187,7 @@ export const showcaseStyles = [
     hex: "#d4a574",
     desc: "Soft, warm beige for the lightest luxury interiors.",
     image: "/silk-beige-1.jpg",
+    image2: "/silk-beige-2.jpg",
   },
 ] as const;
 
